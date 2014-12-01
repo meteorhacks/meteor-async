@@ -86,6 +86,8 @@ Very similar to `Async.wrap(object, functionName)`,
 but this API can be used to wrap **multiple** instance methods of an object.
 
 ~~~js
+GithubApi = Npm.require('github');
+
 var github = new GithubApi({
     version: "3.0.0"
 });
@@ -94,6 +96,6 @@ var github = new GithubApi({
 var wrappedGithubUser = Async.wrap(github.user, ['getFrom', 'getEmails']);
 
 //usage
-var profile = wrappedGithubUser.getFrom('arunoda');
+var profile = wrappedGithubUser.getFrom({user: 'arunoda'});
 var emails = wrappedGithubUser.getEmails();
 ~~~
