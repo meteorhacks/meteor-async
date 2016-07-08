@@ -13,7 +13,7 @@ meteor add meteorhacks:async
 > Available in the Server Side only
 
 Meteor APIs are executed synchronously. Most of the NodeJS modules works asynchronously. 
-So we need a way to bride the gap. Async Utilities comes to rescue you.
+So we need a way to bridge the gap. Async Utilities comes to rescue you.
 
 ### Async.runSync(function) 
 
